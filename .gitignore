@@ -1,0 +1,13 @@
+*.ai
+ai2html-*/*.html
+index.html
+archive/
+
+.DS_Store
+.env
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

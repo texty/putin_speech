@@ -1,7 +1,9 @@
 *.ai
 ai2html-*/*.html
-index.html
 archive/
+new/*_temp.svg
+new/*_2.svg
+
 
 .DS_Store
 .env

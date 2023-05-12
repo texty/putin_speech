@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+
+	<script src="https://texty.org.ua/documents/80/jquery-3.3.1.js"></script>
+	<script src='https://texty.org.ua/documents/149/scrollama.min.js'></script>
+
+	<script src="https://unpkg.com/popper.js@1"></script>
+	<script src="https://unpkg.com/tippy.js@5"></script>
+</head>
+<style>
+	body {
+		margin: 0;
+	}
+
+	.graphic {
+		background-color: black;
+	}
+
+	#others {
+		display: none;
+	}
+
+	svg {
+		display: block;
+		max-width: 1000px;
+		margin: auto;
+	}
+
+	/* scrollama */
+	.scroll__graphic {
+		position: sticky;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(119, 119, 119, 1) 77%, rgba(149, 149, 149, 1) 87%, rgba(186, 186, 186, 1) 93%, rgba(252, 252, 252, 0.5) 100%);
+	}
+
+
+	.graphic-wrapper {
+		max-width: 900px;
+		box-shadow: 2px;
+		margin: auto;
+		aspect-ratio: 4/1.6;
+		overflow: hidden;
+	}
+
+	.scroll__text {
+		width: 96%;
+		max-width: 600px;
+		margin: auto;
+		font-family: 'Proxima Nova', sans-serif;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+
+	/* .step {
+		margin-bottom: 20vh;
+	} */
+
+
+	.teeth {
+		background-color: black;
+		display: inline-block;
+		background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjQuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzNTAgMjAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNTAgMjAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0RCRDlEOTtmaWxsLW9wYWNpdHk6MC43O30KCS5zdDF7ZmlsbDojRkYxQzUyO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTI3Ny44NCw1MS4xMjZjLTI0LjYyMy0wLjg0OS01Ny4zOTEtOC40MTktMTAyLjQ2NCw4LjQyOXYtMC4wNjdjLTAuMDM1LDAuMDEzLTAuMDY5LDAuMDI1LTAuMTAzLDAuMDM3CgljLTAuMDM0LTAuMDEyLTAuMDY4LTAuMDI0LTAuMTAzLTAuMDM3djAuMDY3Yy00NS4wNzQtMTYuODQ4LTc3Ljg0Mi05LjI3OC0xMDIuNDY0LTguNDI5QzQ3Ljg3NSw1MS45ODIsMjkuMzIzLDY3LjExLDI5LjMyMyw2Ny4xMQoJYzcuNzA2LDgxLjM0NCw1Mi44MDIsMTIxLjg3Myw1Mi44MDIsMTIxLjg3M2MtNS45OTQtMzEuMzk2LTEuNzEyLTg5LjMzNS0xLjcxMi04OS4zMzVjMTUuMjcsMTkuMTIyLDI0LjY4OCwyNC4wNDUsMzEuNTM4LDE3LjYyNQoJYzYuMTM3LTUuNzUyLDEzLjA1OC0xNi40ODMsMTMuMDU4LTE2LjQ4M2MxLjk5OC0wLjU3MSwxMC4yNzUsMTEuNzczLDEwLjI3NSwxMS43NzNzOC4xMzQsMTQuNzcsMTkuNjk0LDQuNzEKCWM4Ljk3NC03LjgxMSwxOS4yLTE2LjU0MywyMC4yOTYtMTcuNDc4YzEuMDk2LDAuOTM1LDExLjMyMiw5LjY2OCwyMC4yOTYsMTcuNDc4YzExLjU1OSwxMC4wNjEsMTkuNjk0LTQuNzEsMTkuNjk0LTQuNzEKCXM4LjI3Ny0xMi4zNDQsMTAuMjc1LTExLjc3M2MwLDAsNi45MjEsMTAuNzMxLDEzLjA1OCwxNi40ODNjNi44NSw2LjQyLDE2LjI2OSwxLjQ5OCwzMS41MzgtMTcuNjI1YzAsMCw0LjI4MSw1Ny45MzktMS43MTIsODkuMzM1CgljMCwwLDQ1LjA5Ni00MC41MjksNTIuODAyLTEyMS44NzNDMzIxLjIyMyw2Ny4xMSwzMDIuNjcxLDUxLjk4MiwyNzcuODQsNTEuMTI2eiIvPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yNDAuODYsMjQuNjdjLTQ1LjEwMi04LjIwMi02MS40OTIsNS40OTMtNjUuNTg4LDEwLjA5M2MtNC4wOTYtNC42LTIwLjQ4Ni0xOC4yOTUtNjUuNTg4LTEwLjA5MwoJCWMtOTcuMTQsMTcuNjY1LTg5LjQ1NSw0Ni44NS05Ny4xNCw2NC4xMzFjMCwwLDQ2LjgwMi01MC4wODcsMTYxLjgyOS0xNi4zMzJjMCwwLDAuNDUxLDAuMjY1LDAuNjc5LDAuMTk4CgkJYzAuMDMxLDAuMDA5LDAuMDc0LTAuMDAyLDAuMTA5LDAuMDAxdjAuMDAyYzAuMDQsMC4wMDYsMC4wNzItMC4wMDQsMC4xMTEtMC4wMDFjMC4wMzktMC4wMDIsMC4wNywwLjAwNywwLjExLDAuMDAxdi0wLjAwMgoJCWMwLjAzNS0wLjAwMywwLjA3OCwwLjAwOCwwLjEwOS0wLjAwMWMwLjIyOCwwLjA2OCwwLjY3OS0wLjE5OCwwLjY3OS0wLjE5OEMyOTEuMTk4LDM4LjcxNCwzMzgsODguODAxLDMzOCw4OC44MDEKCQlDMzMwLjMxNSw3MS41MiwzMzgsNDIuMzM1LDI0MC44NiwyNC42N3oiLz4KPC9nPgo8L3N2Zz4K");
+		width: 25px;
+		height: 15px;
+		margin-top: 2px;
+		cursor: pointer;
+	}
+
+	.teeth:hover {
+		background-color: rgb(159, 33, 33);
+	}
+
+	span.qoute {
+		background-color: black;
+		color: white;
+		padding: 3px;
+	}
+
+</style>
+
+<body>
+	<section id="scroll__2" class="scroll">
+		<div class="scroll__graphic__2 scroll__graphic">
+
+			<div id="graphic-wrapper__2" class="graphic-wrapper">
+
+			</div>
+		</div>
+
+		<div class="scroll__text scroll__text__2">
+			<div class="step" data-up='["#baiden", "#tramp"]' data-down=''>
+				<div>
+					<h2>Друг Буш і ворог Обама</h2>
+					<h3>Путін та американські президенти</h3>
+
+					<p>Можна простежити цікаву тенденцію: Путін намагається публічно не називати імен своїх головних противників чи ворогів. Це й раніше стосувалося всіх, хто конкурував, зіштовхувався з диктатором, і нині стосується таких осіб, як Джо Байден чи Володимир Зеленський.</p>
+
+					<p><b>Джо Байден</b> не здобув багато публічних оцінок і характеристик від Путіна. Зафіксовано лише кілька публічних описів Байдена від Путіна. <span class="qoute">“Президент Байден, конечно, кардинальным образом отличается от Трампа, потому что он профессионал, он почти что всю жизнь свою сознательную в политике”</span>. Або ось наче позитивна, але з легким знущанням: <span class="qoute">“Вы знаете, я хочу сказать, что образ Президента Байдена, который рисует и наша, и даже американская пресса, ничего общего не имеет с действительностью. Он же находится в длительной поездке, прилетел из-за океана, джетлаг так называемый, смена часовых поясов. В принципе я даже когда летаю – выбивает это из колеи. Нет, он всё-таки выглядит бодрым”</span>.</p>
+				
+					<p><b>Дональда Трампа</b> Путін характеризував як яскраву людину. <span class="teeth"
+						data-tippy-content="“Я на ходу сказал, что Трамп — яркий человек”"></span> Також із певним знущанням він захищав Трампа: <span class="qoute">“Трамп приехал и тут же побежал встречаться с московскими проститутками». Это человек, во-первых, взрослый уже, а во-вторых, человек, который не всю жизнь, но многие годы занимался организацией конкурсов красоты, общался с самыми красивыми женщинами мира. Знаете, я с трудом могу себе представить, что он побежал в отель встречаться с нашими девушками с пониженной социальной ответственностью. Хотя они самые лучшие в мире, безусловно. Но сомневаюсь, что Трамп клюнул на это”</span>.
+				
+					<p>У 2008 році президентом США було обрано <b>Барака Обаму</b>, перший президентський термін якого припав на каденцію Дмитра Медведєва. Хоча Путін і заявляв, що в нього склалися партнерські відносини з Обамою, водночас президент Росії неодноразово критикував Обаму особисто. <span class="teeth"
+						data-tippy-content="“Как я отношусь к Обаме после разоблачений Сноудена? Я ему завидую. Завидую, потому что он может это сделать, и ему за это ничего не будет”, “Теперь Президент Барак Обама с трибуны Генассамблеи ООН включил «российскую агрессию в Европе» в число трёх основных угроз для человечества на сегодняшний день, наряду со смертельной лихорадкой Эбола и террористической группировкой «Исламское государство»”"></span>
+
+						<p>За час правління Путіна в нього склалися досить теплі відносини з двома американськими Президентами: Білом Клінтоном і Джорджем Бушем-молодшим.</p>
+
+	
+					
+					<p><b>Джордж Буш</b> став тим, кого Путін називав другом. <span class="teeth"
+						data-tippy-content="“Я считаю Джорджа Буша своим другом, верным и надежным партнером”"></span> . Президент РФ неодноразово зустрічався з Бушем у неофіційному стилі, гостював у його резиденції та виголошував тост за Техас — рідний штат Буша. Путін навіть піддігрував Бушу та підтримував його виборчі кампанії. <span class="teeth"
+						data-tippy-content="“Международный терроризм ставит перед собой цель не допустить переизбрание Буша на второй президентский срок в Америке”"></span> Коли ж Путін критикував американську операцію в Іраку, то намагався уникати називати ім’я Буша й натомість в усьому звинувачував адміністрацію.</p>
+				
+					<p>Відносини з <b>Клінтоном</b> Путін характеризував як дружні й теплі. <span class="teeth"
+						data-tippy-content="“У нас сложились очень добрые и не только деловые, но и личные отношения. Для меня Президент Клинтон очень удобный и приятный партнер по переговорам”. 
+						"></span></p>
+				</div>
+			</div>
+					
+
+
+			<div class="step" >
+				<div>
+					<h2>“Вакханалия просто”</h2>
+					<h3>Путін і президенти України</h3>
+					
+					<p> Україна завжди займала одне з головних місць путінської політики.</p>
+
+					
+					<p>Про Зеленського Путін говорив здебільшого негативно.  <span class="teeth"
+						data-tippy-content="“Судя по всему, он хороший специалист в той области, в которой до сих пор работал, он хороший актёр. Я говорю серьёзно, а вы смеётесь. Но одно дело кого‑то играть, а другое дело быть кем‑то. Для того чтобы играть, нужен талант, это точно. Много талантов. Один из этих талантов — талант перевоплощения. Ты через каждые десять минут можешь менять амплуа. … А для того чтобы заниматься государственными делами, нужны другие качества. Нужен опыт определённый, знания, нужно уметь найти главные проблемы, увидеть их, найти инструменты решения этих проблем, уметь собрать дееспособных людей в одну команду”. 
+						"></span></p>
+
+					<p>Путін переконаний, що Зеленський потрапив під вплив націоналістів і тому не хотів виконувати Мінські угоди.  <span class="teeth"
+						data-tippy-content="“Не думаю, что я вправе давать оценки действиям Президента Украины, особенно его контактам с националистами. Сам господин Зеленский на украинского националиста, естественно, не похож, но сможет ли он справиться с ними, мне сейчас трудно сказать”. 
+						"></span></p>
+				
+					<p>До Петра Порошенка Путін ставився не краще. І якщо на початку його каденції він хотів домовитися з Порошенком, то пізніше звинувачував його в розв’язанні війни на Донбасі. <span class="teeth"
+						data-tippy-content="“Уже пришедший к власти господин Порошенко, несмотря на попытки убедить его не делать это, предпринял вторую попытку вооружённого решения вопроса, вооружённым способом, с помощью вооружённых сил. Чем она закончилась, какими трагедиями, мы хорошо знаем”"></span></p>
+				
+					<p>Віктор Янукович розчарував Володимира Путіна. Коли колишній президент України був готовим підписати Угоду про Асоціацію з ЄС, у Росії його звинуватили у зраді. Але згодом Путін захищав Януковича. <span class="teeth" data-tippy-content="“Мы знаем, что в своё время Президент Янукович отказался подписывать документ об ассоциации с Евросоюзом, но он не отказался даже, а сказал, что он на таких условиях не может подписать, потому что это будет резко ухудшать социально-экономическое положение Украины и граждан страны”"></span> Однак публічно Путін нечасто називав Януковича своїм другом і не виділяв його серед інших лідерів. 
+					</p>
+				
+					<p>Попередник Януковича Віктор Ющенко здобув дві характеристики. Одразу після його обрання Путін запевняв, що він знайомий з Ющенком і готовий з ним співпрацювати. <span class="teeth" data-tippy-content="“Должен состояться визит Президента Украины Виктора Ющенко в Москву. У нас очень большой объем совместной работы с Украиной”, “Я хочу поблагодарить Виктора Андреевича за конструктивный подход, за очень доверительный характер нашего разговора и в первой его части, и во второй. Мы удовлетворены, и выражаю надежду на то, что в самое ближайшее время, как мы и договорились с Президентом, мы будем иметь возможность дать поручение исполнительным органам власти, правительствам России и Украины подготовить ряд предложений по активизации нашего взаимодействия”"></span></p>
+					
+					<p>Але вже від 2005 року почалося стрімке погіршення відносин. Найнижча точка співпраці була вже за президентства Дмитра Медведєва. Згодом Путін характеризував Ющенка як корупціонера й націоналіста. <span class="teeth" data-tippy-content="“Вот господин Ющенко был, Тимошенко — они же абсолютно были прозападно ориентированы. Тот же самый так называемый цивилизационный выбор. Какой там, извините за моветон, нафиг цивилизационный выбор? Деньги натырили у украинского народа, спрятали в банках и хотят их защитить”"></span>. Путін повторює, що Ющенко у 2004 році став президентом незаконно, і вкрав перемогу у Януковича.  <span class="teeth" data-tippy-content="“В результате третьего тура голосования, который не предусмотрен в Конституции Украины. Активно это было поддержано западными странами. Ну, это полное нарушение Конституции. Какая же здесь демократия? Вакханалия просто”"></span>
+					</p>
+
+					<p>Леоніда Кучму Путін характеризував переважно нейтрально. Він був партнером, з яким можна домовлятися. Це період тісної співпраці між Росією та Україною. <span class="teeth" data-tippy-content="“Я, ваш покорный слуга, господин Шрёдер как Канцлер и тогдашний Президент Украины Кучма подписали меморандум о том, что мы идём к созданию консорциума на базе ГТС Украины с привлечением России, Украины, европейских партнёров, не только ФРГ, но и других партнеров”"></span></p>
+				
+					<p>Також Путін згадував Леоніда Кравчука. Для нього колишній президент України — націоналіст.<span class="teeth" data-tippy-content="“Если мы вспомним первого президента Украины господина Кравчука, он был гораздо большим националистом, чем нынешнее руководство Украины, которое демонстрирует прагматизм”, “Простой украинский гражданин, простой украинский мужик, он страдал и при Николае Кровавом, и при Кравчуке, и при Кучме, и при Ющенко, и при Януковиче.”"></span> </p>
+				</div>
+			</div>
+
+			<div class="step" style="height:5vh;">
+				<div>
+
+
+				</div>
+			</div>
+
+
+			<div class="step" style="height:50vh;">
+				<div>
+
+
+				</div>
+			</div>
+
+
+
+
+
+		</div> <!-- end of scroll text-->
+
+
+
+
+	</section>
+
+	<script src="functions.js"></script>
+<script>
+		var prevent2 = true;
+		d3.xml("new/liders_final.svg").then(function (data) {
+
+			//add svg
+			d3.select("#scroll__2 > .scroll__graphic > .graphic-wrapper")
+				.node()
+				.append(data.documentElement);
+
+
+			const svg2 = d3.select("#svg2");
+			const defs2 = svg2.append("defs");
+
+			createMask(defs2, "mask3", "white");
+			createMask(defs2, "mask4", "white");
+
+
+			d3.selectAll(".president:not(#usa)").attr("opacity", 0);
+
+			
+			
+			function handleStepEnter__2(r) {
+
+				if(r.index === 0 && r.direction === "up"){
+					reDraw(svg2, "#usa", "#ukraine", "president", "3")
+				}
+
+				if(r.index === 1 && r.direction === "down"){
+					reDraw(svg2, "#ukraine", "#usa", "president", "3")
+				}
+
+				if(r.index === 2 && r.direction === "up"){
+					reDraw(svg2, "#ukraine", "#usa", "president", "3");
+					setAspectRatio("#graphic-wrapper__2", "4/1.6")
+					setMaskWidthAndAddTransition('#mask4 rect', 0, 2000)
+					
+					prevent2 = true;
+				}
+				
+
+				if (r.index === 3 && r.direction === "down" && prevent2 === true) {
+					reDraw(svg2, "#usa", "#ukraine", "president", "3")
+					svg2.select("#other").style("display", "block");
+					setAspectRatio("#graphic-wrapper__2", "1/0.7")
+
+					setMaskWidthAndAddTransition('#mask4 rect', 100, 2000)
+					prevent2 = false;
+				}
+
+			}
+
+
+			init('#scroll__2', '.scroll__graphic__2', '.scroll__text__2', '.scroll__text__2 .step', handleStepEnter__2);
+
+		})
+	</script>
+</body>
+
+</html>

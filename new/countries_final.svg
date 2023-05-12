@@ -601,57 +601,10 @@
 				</g>
 			</g>
 		</g>
-		
-			<text transform="matrix(1 0 0 1 254.7224 821.1373)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2000</text>
-
-			<text transform="matrix(1 0 0 1 259.9084 712.2619)" class="st4 st17" style="text-anchor: right; display:none;fill:#848484;enable-background:new    ;">min 1</text>
-		
-			<text transform="matrix(1 0 0 1 411.7867 704.6153)" class="st4 st17" style="display:none;fill:#848484;enable-background:new    ;">ставлення партнерське</text>
-		
-			<text transform="matrix(1 0 0 1 411.7867 721.1356)" class="st4 st17" style="display:none;fill:#FF0046;enable-background:new    ;">ставлення негативне</text>
-		
-			<text transform="matrix(1 0 0 1 314.4431 712.2615)" class="st4 st17" style="display:none;fill:#848484;enable-background:new    ;">max 74</text>
-		
-			<text transform="matrix(1 0 0 1 257.4524 840.7287)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2001</text>
-		
-			<text transform="matrix(1 0 0 1 254.9625 860.3201)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2002</text>
-		
-			<text transform="matrix(1 0 0 1 255.2722 879.912)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2003</text>
-		
-			<text transform="matrix(1 0 0 1 255.262 899.5035)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2004</text>
-		
-			<text transform="matrix(1 0 0 1 254.9424 919.0955)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2005</text>
-		
-			<text transform="matrix(1 0 0 1 254.9326 938.6866)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2006</text>
-		
-			<text transform="matrix(1 0 0 1 255.6922 958.2784)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2007</text>
-		
-			<text transform="matrix(1 0 0 1 255.0325 978.8705)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2008</text>
-		
-			<text transform="matrix(1 0 0 1 257.6926 1015.2225)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2012</text>
-		
-			<text transform="matrix(1 0 0 1 258.0026 1034.8391)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2013</text>
-		
-			<text transform="matrix(1 0 0 1 257.9929 1054.4557)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2014</text>
-		
-			<text transform="matrix(1 0 0 1 257.6725 1074.0731)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2015</text>
-		
-			<text transform="matrix(1 0 0 1 257.6628 1093.689)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2016</text>
-		
-			<text transform="matrix(1 0 0 1 258.4221 1113.3057)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2017</text>
-		
-			<text transform="matrix(1 0 0 1 257.7624 1132.9227)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2018</text>
-		
-			<text transform="matrix(1 0 0 1 257.6628 1152.5393)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2019</text>
-		
-			<text transform="matrix(1 0 0 1 254.9626 1172.1561)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2020</text>
-		
-			<text transform="matrix(1 0 0 1 257.6931 1191.7722)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2021</text>
-		
-			<text transform="matrix(1 0 0 1 255.2028 1211.389)" class="st4" style="display:none;fill:#848484;enable-background:new    ; font-size:10px;">2022</text>
+	
 		<text transform="matrix(0 -1 1 0 37.9448 72.5615)" class="st16 st4 st17">2000</text>
-		<text transform="matrix(1 0 0 1 620.3447 73.6869)" class="st16 st4 st17">min 1</text>
-		<text transform="matrix(1 0 0 1 650.8089 42.3404)" class="st16 st4 st17">max 74</text>
+		<text transform="matrix(1 0 0 1 645 72.6869)" class="st16 st4 st17" style="text-anchor:end">min 1</text>
+		<text transform="matrix(1 0 0 1 650.8089 35.3404)" class="st16 st4 st17">max 74</text>
 		<text transform="matrix(0 -1 1 0 65.9751 70.9258)" class="st16 st4 st17">2001</text>
 		<text transform="matrix(0 -1 1 0 94.0044 72.418)" class="st16 st4 st17">2002</text>
 		<text transform="matrix(0 -1 1 0 122.0327 72.2314)" class="st16 st4 st17">2003</text>

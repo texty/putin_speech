@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.0" id="svg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 800 510.5" style="enable-background:new 0 0 800 510.5;" xml:space="preserve">
+	 viewBox="0 0 846 510.5" style="enable-background:new 0 0 846 510.5;" xml:space="preserve">
 <style type="text/css">
 	.st_p0{fill:#070707;stroke:#000000;stroke-miterlimit:10;}
 	.st_p1{fill:none;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;stroke-dasharray:4;}
@@ -526,21 +526,19 @@
 			</g>
 		</g>
 	</g>
-	<path class="st_p4" d="M715.7,38.8L715.7,38.8L715.7,38.8c-0.1,0-0.1,0-0.1,0h-0.1v0.1c-4.3,0.4-9.1,4.9-19.5,13.4
-		c-4.8,3.9-11.8,6.6-18.7,8.1c-1.7,0.4-1.9,0.7-1.8,1h40.2L715.7,38.8L715.7,38.8z"/>
-	<path class="st_p5" d="M676.5,61.9c0,0,12.3,2.6,19.5,8.5c10.6,8.6,15.4,13.1,19.7,13.4l0,0l0,0V61.3h-40.2
-		C675.7,61.6,676.5,61.9,676.5,61.9z"/>
-	<text transform="matrix(1 0 0 1 644.5734 64.1801)" class="st_p8 st_p6 st_p7">min 1</text>
+	<path class="st_p4" d="m 715.7,28.8 v 0 0 c -0.1,0 -0.1,0 -0.1,0 h -0.1 v 0.1 c -4.3,0.4 -9.1,4.9 -19.5,13.4 -4.8,3.9 -11.8,6.6 -18.7,8.1 -1.7,0.4 -1.9,0.7 -1.8,1 h 40.2 z"/>
+	<path class="st_p5" d="m 676.5,51.9 c 0,0 12.3,2.6 19.5,8.5 10.6,8.6 15.4,13.1 19.7,13.4 v 0 0 -22.5 h -40.2 c 0.2,0.3 1,0.6 1,0.6 z"/>
+	<text transform="matrix(1 0 0 1 644.5734 55)" class="st_p8 st_p6 st_p7">min 1</text>
 	<!-- <text transform="matrix(1 0 0 1 676.3774 32.8337)" class="st_p8 st_p6 st_p7">max 20</text> -->
 	<rect x="720.2" y="64.2" class="st_p19" width="76.6" height="30.7"/>
-	<text transform="matrix(1 0 0 1 720.1852 72.1843)" class="st_p20 st_p6 st_p7">ставлення </text>
-	<text transform="matrix(1 0 0 1 720.1852 84.0843)" class="st_p20 st_p6 st_p7">негативне</text>
+	<text transform="matrix(1 0 0 1 720.1852 63)" class="st_p20 st_p6 st_p7">ставлення </text>
+	<text transform="matrix(1 0 0 1 720.1852 75)" class="st_p20 st_p6 st_p7">негативне</text>
 	<rect x="720.2" y="35.3" class="st_p19" width="93.4" height="30.7"/>
-	<text transform="matrix(1 0 0 1 720.1852 43.3431)" class="st_p8 st_p6 st_p7">ставлення </text>
-	<text transform="matrix(1 0 0 1 720.1852 55.2431)" class="st_p8 st_p6 st_p7">партнерське</text>
+	<text transform="matrix(1 0 0 1 720.1852 38)" class="st_p8 st_p6 st_p7">ставлення </text>
+	<text transform="matrix(1 0 0 1 720.1852 50)" class="st_p8 st_p6 st_p7">партнерське</text>
 </g>
 <g id="other" mask="url(#mask4)">
-	<text transform="matrix(1 0 0 1 676.3774 32.8337)" class="st_p8 st_p6 st_p7">max 20</text>
+	<text transform="matrix(1 0 0 1 676.3774 25)" class="st_p8 st_p6 st_p7">max 20</text>
 
 	<path class="st_p4" d="M183.7,483.4c0,0-4.1-0.3-6.6-0.9c-3.6-0.9-5.2-1.4-6.6-1.4l0,0l0,0l0,0l0,0c-1.4,0-3.1,0.5-6.6,1.4
 		c-2.4,0.6-6.6,0.9-6.6,0.9s-0.9,0.1,0.3,0.2c2.3,0.2,4.7,0.4,6.3,0.8c3.5,0.9,5.1,1.4,6.6,1.4l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0

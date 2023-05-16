@@ -60,7 +60,7 @@
 <g id="text">
 	<text transform="matrix(0 -1 1 0 30.9355 70.4492)" class="st_t2 st_t3 st_t4">2000</text>
 	<text transform="matrix(1 0 0 1 700 41.7268)" class="st_t2 st_t3 st_t5" style='text-anchor: end;'>min 1</text>
-	<text transform="matrix(1 0 0 1 743.8377 27.0867)" class="st_t2 st_t3 st_t5">max 249 </text>
+	<!-- <text transform="matrix(1 0 0 1 743.8377 27.0867)" class="st_t2 st_t3 st_t5">max 249 </text> -->
 	<text transform="matrix(0 -1 1 0 61.6758 68.9482)" class="st_t2 st_t3 st_t4">2001</text>
 	<text transform="matrix(0 -1 1 0 92.418 70.3174)" class="st_t2 st_t3 st_t4">2002</text>
 	<text transform="matrix(0 -1 1 0 123.1602 70.1475)" class="st_t2 st_t3 st_t4">2003</text>
@@ -366,6 +366,8 @@
 	<text transform="matrix(1 0 0 1 29.0208 19.7289)" class="st_t2 st_t18 st_t19">Згадки різних тем в офіційній мові Путіна</text>
 </g>
 <g id="other" mask="url(#mask6)">
+	<text transform="matrix(1 0 0 1 743.8377 27.0867)" class="st_t2 st_t3 st_t5">max 249 </text>
+
 	<g>
 		<path class="st_t14" d="M653.1,464c0,0-3.3-0.3-5.2-0.9c-2.8-0.9-4.1-1.4-5.2-1.5l0,0l0,0l0,0l0,0c-1.1,0-2.4,0.5-5.2,1.5
 			c-1.9,0.6-5.2,0.9-5.2,0.9s-0.7,0.1,0.2,0.2c1.8,0.2,3.7,0.5,5,0.9c2.8,0.9,4.1,1.4,5.2,1.5l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0

@@ -531,7 +531,7 @@
 	<path class="st_p5" d="M676.5,61.9c0,0,12.3,2.6,19.5,8.5c10.6,8.6,15.4,13.1,19.7,13.4l0,0l0,0V61.3h-40.2
 		C675.7,61.6,676.5,61.9,676.5,61.9z"/>
 	<text transform="matrix(1 0 0 1 644.5734 64.1801)" class="st_p8 st_p6 st_p7">min 1</text>
-	<text transform="matrix(1 0 0 1 676.3774 32.8337)" class="st_p8 st_p6 st_p7">max 20</text>
+	<!-- <text transform="matrix(1 0 0 1 676.3774 32.8337)" class="st_p8 st_p6 st_p7">max 20</text> -->
 	<rect x="720.2" y="64.2" class="st_p19" width="76.6" height="30.7"/>
 	<text transform="matrix(1 0 0 1 720.1852 72.1843)" class="st_p20 st_p6 st_p7">ставлення </text>
 	<text transform="matrix(1 0 0 1 720.1852 84.0843)" class="st_p20 st_p6 st_p7">негативне</text>
@@ -540,6 +540,8 @@
 	<text transform="matrix(1 0 0 1 720.1852 55.2431)" class="st_p8 st_p6 st_p7">партнерське</text>
 </g>
 <g id="other" mask="url(#mask4)">
+	<text transform="matrix(1 0 0 1 676.3774 32.8337)" class="st_p8 st_p6 st_p7">max 20</text>
+
 	<path class="st_p4" d="M183.7,483.4c0,0-4.1-0.3-6.6-0.9c-3.6-0.9-5.2-1.4-6.6-1.4l0,0l0,0l0,0l0,0c-1.4,0-3.1,0.5-6.6,1.4
 		c-2.4,0.6-6.6,0.9-6.6,0.9s-0.9,0.1,0.3,0.2c2.3,0.2,4.7,0.4,6.3,0.8c3.5,0.9,5.1,1.4,6.6,1.4l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0
 		l0,0c1.4,0,3.1-0.5,6.6-1.4c1.6-0.4,4-0.7,6.3-0.8C184.6,483.5,183.7,483.4,183.7,483.4z"/>

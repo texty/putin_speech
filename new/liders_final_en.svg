@@ -249,7 +249,8 @@
 	<text transform="matrix(1 0 0 1 601.751 249.3734)" class="st_p3 st_p6">Bill Clinton</text>
 </g>
 <g id="header">
-	<text transform="matrix(1 0 0 1 29.0208 19.2396)" class="st_p8 st_p9 st_p10">Згадки про лідерів країн в офіційній мові Путіна</text>
+	<text transform="matrix(1 0 0 1 29.0208 19.2396)" class="st_p8 st_p9 st_p10">Mentions of heads of state in Putin’s official statements
+</text>
 	<text transform="matrix(0 -1 1 0 31.8081 75.7422)" class="st_p8 st_p6 st_p7">2000</text>
 	<text transform="matrix(0 -1 1 0 59.5576 75.7422)" class="st_p8 st_p6 st_p7">2001</text>
 	<text transform="matrix(0 -1 1 0 87.3066 75.7422)" class="st_p8 st_p6 st_p7">2002</text>
@@ -531,11 +532,11 @@
 	<text transform="matrix(1 0 0 1 644.5734 55)" class="st_p8 st_p6 st_p7">min 1</text>
 	<!-- <text transform="matrix(1 0 0 1 676.3774 32.8337)" class="st_p8 st_p6 st_p7">max 20</text> -->
 	<rect x="720.2" y="64.2" class="st_p19" width="76.6" height="30.7"/>
-	<text transform="matrix(1 0 0 1 720.1852 63)" class="st_p20 st_p6 st_p7">ставлення </text>
-	<text transform="matrix(1 0 0 1 720.1852 75)" class="st_p20 st_p6 st_p7">негативне</text>
+	<text transform="matrix(1 0 0 1 720.1852 63)" class="st_p20 st_p6 st_p7">negative </text>
+	<text transform="matrix(1 0 0 1 720.1852 75)" class="st_p20 st_p6 st_p7">attitude</text>
 	<rect x="720.2" y="35.3" class="st_p19" width="93.4" height="30.7"/>
-	<text transform="matrix(1 0 0 1 720.1852 38)" class="st_p8 st_p6 st_p7">ставлення </text>
-	<text transform="matrix(1 0 0 1 720.1852 50)" class="st_p8 st_p6 st_p7">партнерське</text>
+	<text transform="matrix(1 0 0 1 720.1852 38)" class="st_p8 st_p6 st_p7">positive </text>
+	<text transform="matrix(1 0 0 1 720.1852 50)" class="st_p8 st_p6 st_p7">attitude</text>
 </g>
 <g id="other" mask="url(#mask4)">
 	<text transform="matrix(1 0 0 1 676.3774 25)" class="st_p8 st_p6 st_p7">max 20</text>

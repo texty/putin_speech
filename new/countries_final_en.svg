@@ -627,13 +627,13 @@
 		<text transform="matrix(0 -1 1 0 567.9297 70.7793)" class="st16 st4 st17">2021</text>
 		<text transform="matrix(0 -1 1 0 595.959 72.2754)" class="st16 st4 st17">2022</text>
 		<rect x="693.1" y="73.7" class="st18" width="76.6" height="30.7"/>
-		<text transform="matrix(1 0 0 1 693.0933 81.691)" class="st19 st4 st17">ставлення </text>
-		<text transform="matrix(1 0 0 1 693.0933 93.591)" class="st19 st4 st17">негативне</text>
+		<text transform="matrix(1 0 0 1 693.0933 81.691)" class="st19 st4 st17">negative </text>
+		<text transform="matrix(1 0 0 1 693.0933 93.591)" class="st19 st4 st17">attitude</text>
 		<rect x="693.1" y="44.8" class="st18" width="93.4" height="30.7"/>
-		<text transform="matrix(1 0 0 1 693.0933 52.8498)" class="st16 st4 st17">ставлення </text>
-		<text transform="matrix(1 0 0 1 693.0933 64.7498)" class="st16 st4 st17">партнерське</text>
+		<text transform="matrix(1 0 0 1 693.0933 52.8498)" class="st16 st4 st17">positive </text>
+		<text transform="matrix(1 0 0 1 693.0933 64.7498)" class="st16 st4 st17">attitude</text>
 	</g>
-	<text transform="matrix(1 0 0 1 29.0208 24.7928)" class="st16 st20 st21">Mentions of countries in Putin's official language</text>
+	<text transform="matrix(1 0 0 1 29.0208 24.7928)" class="st16 st20 st21">Mentions of countries in Putin’s official statements</text>
 	<path class="st6" d="M688.6,48.3L688.6,48.3L688.6,48.3c-0.1,0-0.1,0-0.1,0h-0.1v0.1c-4.3,0.4-9.1,4.9-19.5,13.4
 		c-4.8,3.9-11.8,6.6-18.7,8.1c-1.7,0.4-1.9,0.7-1.8,1h40.2L688.6,48.3L688.6,48.3z"/>
 	<path class="st7" d="M649.4,71.4c0,0,12.3,2.6,19.5,8.5c10.6,8.6,15.4,13.1,19.7,13.4l0,0l0,0V70.8h-40.2
